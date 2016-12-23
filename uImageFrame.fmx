@@ -1,0 +1,30 @@
+object ImageFrame: TImageFrame
+  Margins.Left = 10.000000000000000000
+  Margins.Top = 10.000000000000000000
+  Margins.Right = 10.000000000000000000
+  Margins.Bottom = 10.000000000000000000
+  Size.Width = 160.000000000000000000
+  Size.Height = 240.000000000000000000
+  Size.PlatformDefault = False
+  object Image: TImage
+    OnTap = ImageTap
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 160.000000000000000000
+    Size.Height = 240.000000000000000000
+    Size.PlatformDefault = False
+    OnClick = ImageClick
+  end
+  object NetHTTPClient1: TNetHTTPClient
+    Asynchronous = False
+    ConnectionTimeout = 60000
+    ResponseTimeout = 60000
+    AllowCookies = True
+    HandleRedirects = True
+    UserAgent = 'Embarcadero URI Client/1.0'
+    Left = 40
+    Top = 80
+  end
+end
